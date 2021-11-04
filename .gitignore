@@ -1,3 +1,9 @@
+# MyPy cache
+.mypy_cache/
+
+# Compiled Python modules
+*.pyc
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

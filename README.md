@@ -43,6 +43,6 @@ python3 <path to the setup.py file>
 
 MIT License
 
-Copyright (c) 2020-2021 University of St Andrews
-Copyright (c) 2020-2021 University of Strathclyde
-Copyright (c) 2020-2021 UJames Hutton Institute
+Copyright (c) 2020-2021 University of St Andrews  
+Copyright (c) 2020-2021 University of Strathclyde  
+Copyright (c) 2020-2021 UJames Hutton Institute  

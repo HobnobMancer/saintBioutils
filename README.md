@@ -15,7 +15,7 @@ The name is derived from the primary host organisation (University of St Andrews
 
 ### Quick and Easy
 
-The easiest way to install `saintBioutils` and include the (sub)modules and functions is to install the package via pypi, using the following command:  
+The easiest way to install `saintBioutils` and include the (sub)modules and functions is to install the package via `pip`, using the following command:  
 ```bash
 pip3 install saintBioutils
 ```

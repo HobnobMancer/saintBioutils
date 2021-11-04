@@ -1,0 +1,5 @@
+# MyPy cache
+.mypy_cache/
+
+# Compiled Python modules
+*.pyc

@@ -55,17 +55,23 @@ from Bio import Entrez
 from saintBioutils.genbank import entrez_retry
 
 
-def get_genomic_assembly(assembly_accession, suffix="genomic.gbff.gz"):
+def get_genomic_assembly(assembly_accession, outdir=None, suffix="genomic.gbff.gz"):
     """Coordinate downloading Genomic assemmbly from the NCBI Assembly database.
+    
     :param assembly_accession: str, accession of the Genomic assembly to be downloaded
+    :param outdir: Path, path to dir to write out downloaded assemblies to, else writes to cwd
     :param suffix: str, suffix of file
+    
     Return path to downloaded genomic assembly.
     """
     # compile url for download
     genbank_url, filestem = compile_url(assembly_accession, suffix)
 
     # create path to write downloaded Genomic assembly to
-    out_file_path = "_".join([filestem.replace(".", "_"), suffix])
+    if outdir is not None:
+        out_file_path = outdir / "_".join([filestem.replace(".", "_"), suffix])
+    else: 
+        out_file_path = "_".join([filestem.replace(".", "_"), suffix])
     out_file_path = Path(out_file_path)
 
     # download GenBank file

@@ -1,5 +1,7 @@
 # saintBioutils
 
+[![DOI](https://zenodo.org/badge/423782407.svg)](https://zenodo.org/badge/latestdoi/423782407)
+
 Repository containing utility and miscellaneous scripts and functions for use in bioinformatic pipelines, primarily written in Python3.
 
 The name is derived from the primary host organisation (University of St Andrews) when the repo was firsted established.
@@ -41,6 +43,6 @@ python3 <path to the setup.py file>
 
 MIT License
 
-Copyright (c) 2020-2021 University of St Andrews
-Copyright (c) 2020-2021 University of Strathclyde
-Copyright (c) 2020-2021 UJames Hutton Institute
+Copyright (c) 2020-2021 University of St Andrews  
+Copyright (c) 2020-2021 University of Strathclyde  
+Copyright (c) 2020-2021 UJames Hutton Institute  

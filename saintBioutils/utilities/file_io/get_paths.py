@@ -41,8 +41,6 @@
 """Script containing functions to retrieve paths to files and directories"""
 
 
-import logging
-
 from pathlib import Path
 
 

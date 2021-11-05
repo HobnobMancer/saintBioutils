@@ -47,12 +47,13 @@ import logging
 from Bio import SeqIO
 
 
-def extract_protein_seqs(assembly_path, accession, txid, filestem="genbank_proteins"):
+def extract_protein_seqs(assembly_path, accession, txid, target_dir, filestem="genbank_proteins"):
     """Retrieve annoated protein sequences from genomic assembly and write to a single FASTA file.
 
     :param assemly_path: Path to genomic assembly
     :param accession: str, accession number of the genomic assembly
     :param txid: str, NCBI taxonomy id of the host species
+    :param target_dir: Path, directory to write out FASTA of extract protein seqs to
     :param filestem: str, file name prefix
 
     Return path to FASTA file containing the protein sequences from the assembly.
@@ -60,7 +61,7 @@ def extract_protein_seqs(assembly_path, accession, txid, filestem="genbank_prote
     logger = logging.getLogger(__name__)
 
     # build path to the output FASTA file
-    fasta_path = f"{filestem}_{txid}_{accession}.fasta"
+    fasta_path = target_dir / f"{filestem}_{txid}_{accession}.fasta"
 
     protein_count = 0
 

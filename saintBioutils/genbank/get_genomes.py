@@ -52,7 +52,7 @@ from urllib.request import urlopen
 
 from Bio import Entrez
 
-from genbank import entrez_retry
+from saintBioutils.genbank import entrez_retry
 
 
 def get_genomic_assembly(assembly_accession, suffix="genomic.gbff.gz"):

@@ -52,7 +52,7 @@ with Path("README.md").open("r") as long_description_handle:
 
 setuptools.setup(
     name="saintBioutils",
-    version="0.0.10",
+    version="0.0.11",
     # Metadata
     author="Emma E. M. Hobbs",
     author_email="eemh1@st-andrews.ac.uk",
@@ -75,8 +75,7 @@ setuptools.setup(
         "biopython>=1.76",
         "tqdm",
     ],
-    package_dir={'': 'saintBioutils'},
-    packages=setuptools.find_packages('saintBioutils'),
+    packages=setuptools.find_packages(),
     include_package_data=True,
     classifiers=[
         "Development Status :: 4 - Beta",

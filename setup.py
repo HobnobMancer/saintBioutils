@@ -75,7 +75,8 @@ setuptools.setup(
         "biopython>=1.76",
         "tqdm",
     ],
-    packages=setuptools.find_packages(),
+    package_dir={'': 'saintBioutils'}
+    packages=setuptools.find_packages('saintBioutils'),
     include_package_data=True,
     classifiers=[
         "Development Status :: 4 - Beta",

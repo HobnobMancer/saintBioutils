@@ -91,7 +91,7 @@ def build_logger(output, file_name):
 
     Return logger object.
     """
-    logger = logging.getLogger(file_name[:-4])
+    logger = logging.getLogger(file_name.replate(".log","")
 
     if output is None:
         output = os.getcwd()

@@ -41,6 +41,13 @@
 """Functions relating to UniProt and its API"""
 
 
+import logging
+import urllib.parse
+import urllib.request
+
+from urllib.error import HTTPError
+
+
 def get_uniprot_accessions(genbank_dict, args):
     """Retrieve UniProt accessions for the GenBank accessions from UniProt REST API.
     

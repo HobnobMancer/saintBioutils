@@ -38,54 +38,29 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+"""Misc functions"""
+
+def get_chunks_gen(lst, chunk_length):
+    """Separate the long list into separate chunks.
+
+    :param lst: list to be separated into smaller lists (or chunks)
+    :param chunk_length: int, the length of the lists the longer list is to be split up into
+
+    Return a generator object containing lists.
+    """
+    for i in range(0, len(lst), chunk_length):
+        yield lst[i:i + chunk_length]
 
 
-import setuptools
+def get_chunks_list(lst, chunk_length):
+    """Separate the long list into separate chunks.
 
-from pathlib import Path
+    :param lst: list to be separated into smaller lists (or chunks)
+    :param chunk_length: int, the length of the lists the longer list is to be split up into
 
-
-# get long description from README.md
-with Path("README.md").open("r") as long_description_handle:
-    long_description = long_description_handle.read()
-
-
-setuptools.setup(
-    name="saintBioutils",
-    version="0.0.14",
-    # Metadata
-    author="Emma E. M. Hobbs",
-    author_email="eemh1@st-andrews.ac.uk",
-    description="".join(
-        [
-            (
-                "A package of utility and miscellaneous functions for using in bioinformatics"
-                "pipelines, primarily in Python."
-            )
-        ]
-    ),
-    long_description=long_description,
-    long_description_content_type="text/markdown",
-    license="MIT",
-    keywords="bioinforamtics python",
-    platforms="Posix, MacOS X",
-    url="https://github.com/HobnobMancer/saintBioutils",
-    entry_points={},
-    install_requires=[
-        "biopython>=1.76",
-        "tqdm",
-    ],
-    packages=setuptools.find_packages(),
-    include_package_data=True,
-    classifiers=[
-        "Development Status :: 4 - Beta",
-        "Environment :: Console",
-        "Intended Audience :: Science/Research",
-        "License :: OSI Approved :: MIT License",
-        "Natural Language :: English",
-        "Operating System :: POSIX :: Linux",
-        "Operating System :: MacOS :: MacOS X",
-        "Programming Language :: Python :: 3.8",
-        "Topic :: Scientific/Engineering :: Bio-Informatics",
-    ],
-)
+    Return a list of nested lists.
+    """
+    chunks = []
+    for i in range(0, len(lst), chunk_length):
+        chunks.append(lst[i:i + chunk_length])
+    return chunks

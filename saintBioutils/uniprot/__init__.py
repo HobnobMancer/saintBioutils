@@ -77,7 +77,7 @@ def get_uniprot_accessions(genbank_dict, args):
         uniprot_rest_queries,
         desc='Batch retrieving UniProt IDs',
     ):
-        if type(query) != str:
+        if type(query_chunk) != str:
             # convert the set of gbk accessions into str format
             query = ' '.join(query_chunk)
 

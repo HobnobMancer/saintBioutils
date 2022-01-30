@@ -37,6 +37,7 @@ python3 <path to the setup.py file>
 ## Directories
 
 - `genbank` - Scripts for downloading and parsing genomic assemblies from NCBI GenBank
+- `uniprot` - Scripts and functions related to calling to, retrieving from and parsing data from UniProt and its API
 - `utilities` - Script and functions for utility functions for script/program utility operations
 
 ## Copyright and License

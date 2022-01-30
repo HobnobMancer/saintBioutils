@@ -47,6 +47,8 @@ import urllib.request
 
 from urllib.error import HTTPError
 
+from saintBioutils.misc import get_chunks_list
+
 
 def get_uniprot_accessions(genbank_dict, args):
     """Retrieve UniProt accessions for the GenBank accessions from UniProt REST API.

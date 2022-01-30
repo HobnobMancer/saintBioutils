@@ -47,6 +47,8 @@ import urllib.request
 
 from urllib.error import HTTPError
 
+from tqdm import tqdm
+
 from saintBioutils.misc import get_chunks_list
 
 

@@ -47,7 +47,7 @@ import os
 from pathlib import Path
 
 
-def config_logger(args) -> logging.Logger:
+def config_logger(args, logger_name=None) -> logging.Logger:
     """Configure package wide logger.
 
     Configure a logger at the package level, from which the module will inherit.
@@ -55,10 +55,14 @@ def config_logger(args) -> logging.Logger:
     logging level.
 
     :param args: cmd-line args parser
+    :param logger_name: default None, used to specifiy specific logger name (str)
 
     Return nothing
     """
-    logger = logging.getLogger(__package__)
+    if logger_name is None:
+        logger = logging.getLogger(__name__)
+    else:
+        logger = logging.getLogger(logger_name)
 
     # Set format of loglines
     log_formatter = logging.Formatter("[%(levelname)s] [%(name)s]: %(message)s")

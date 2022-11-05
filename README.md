@@ -1,6 +1,7 @@
 # saintBioutils
 
-[![DOI](https://zenodo.org/badge/423782407.svg)](https://zenodo.org/badge/latestdoi/423782407)
+[![DOI](https://zenodo.org/badge/423782407.svg)](https://zenodo.org/badge/latestdoi/423782407)  
+[![pyani PyPi version](https://img.shields.io/pypi/v/saintbioutils "PyPI version")](https://pypi.python.org/pypi/saintbioutils)
 
 Repository containing utility and miscellaneous scripts and functions for use in bioinformatic pipelines, primarily written in Python3.
 

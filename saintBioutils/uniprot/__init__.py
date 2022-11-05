@@ -97,15 +97,19 @@ def get_uniprot_accessions(genbank_dict, args):
         try:
             with urllib.request.urlopen(req) as f:
                 response = f.read()
+                
         except HTTPError:
             try:
                 failed_queries[query] += 1
             except KeyError:
                 failed_queries[query] = 1
+
             if failed_queries[query] > args.retries:
                 del failed_queries[query]
-            else:
+            else:  # try again later
                 uniprot_rest_queries.append(query)
+            
+            continue  # do not proceeed processing the request because request failed
 
         uniprot_batch_response = response.decode('utf-8')
 

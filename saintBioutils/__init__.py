@@ -39,3 +39,5 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 """Package containing misc bioinformatic related funcs"""
+
+__version__ = "0.0.25"
